@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --coverage",
     "build": "babel src -d dist",
-    "minify": "terser src/index.js --compress --mangle --output dist/index.min.js",
+    "minify": "terser dist/index.js --compress --mangle --output dist/index.min.js",
     "build:minify": "npm run build && npm run minify"
   },
   "repository": {
