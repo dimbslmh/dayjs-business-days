@@ -12,7 +12,3 @@ package-lock.json
 
 # jest
 coverage
-
-# build
-build
-index.min.js

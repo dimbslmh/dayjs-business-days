@@ -13,10 +13,8 @@ package-lock.json
 coverage
 
 # dev
-src
 test
 types
-build
 .babelrc
 .prettierrc
 .eslintrc
