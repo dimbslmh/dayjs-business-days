@@ -8,7 +8,9 @@ exports.default = void 0;
 var _default = (option = {}, dayjsClass) => {
   dayjsClass.prototype.isHoliday = function () {
     if (!option.holidays) return false;
-    if (option.holidays.includes(this.format(option.holidayFormat))) return true;
+    const unix = option.utc ? this.utc(true).unix() : this.unix();
+    const day = option.utc ? this.utc(true).format(option.holidayFormat) : this.format(option.holidayFormat);
+    if (option.holidays.includes(option.unix ? unix : day)) return true;
     return false;
   };
 
